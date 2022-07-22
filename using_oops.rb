@@ -44,7 +44,6 @@ class Dictionary
         puts "Sorry,The Word is not found in the Dictionary list....!\n\n"
       end
     end
-    class Blog <Dictionary
     n=0
     while n!=6
       puts "Enter a word from the dictionary..."
@@ -86,6 +85,6 @@ class Dictionary
     end
     puts n
   end
+end
 s=Dictionary.new
-s=Blog.new
 s.dic
