@@ -9,5 +9,5 @@ class Read
       puts "Output.csv file created and numbers chanded into words"
    end
 end
-fileWrite = Read.new
-fileWrite.demo
+obj = Read.new
+obj.demo
