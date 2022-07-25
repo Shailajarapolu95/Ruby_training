@@ -1,5 +1,5 @@
 require 'humanize'
-class File
+class Read
     def demo
       infile = "file.csv"
       outfile = "output.csv"
@@ -9,5 +9,5 @@ class File
       puts "Output.csv file created and numbers chanded into words"
    end
 end
-fileWrite = File.new
+fileWrite = Read.new
 fileWrite.demo
