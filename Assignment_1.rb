@@ -26,7 +26,7 @@ for i in 0..n
 	i.times {print "^"}
 	puts
 end
-#==================================
+#=====================================
 print "Enter the nuber of rows you want to print", ": "
 n= gets.chomp.to_i
 for i in 0..n
