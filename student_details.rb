@@ -1,5 +1,5 @@
 class Student
- def set_student_details()
+ def set_student_details
     puts "Enter Student name..."
     @stud_name = gets.chomp
     puts "Enter Roll number of a student..."
@@ -13,11 +13,11 @@ class Student
     @total_marks
    end
    
-   def calculate_total()
+   def calculate_total
     @total_marks = @mark1 + @mark2 + @mark3
    end
 
-   def display_details()
+   def display_details
     puts "Roll Number : #{@roll_num}"
     puts "Student Name : #{@stud_name}"
     puts "Total Marks : #{@total_marks}"
@@ -25,6 +25,6 @@ class Student
    end
 end
 details = Student.new
-details.set_student_details()
-details.calculate_total()
-details.display_details()
+details.set_student_details
+details.calculate_total
+details.display_details
