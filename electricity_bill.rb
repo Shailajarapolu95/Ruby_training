@@ -1,20 +1,18 @@
 class Electricity
+  attr_accessor :name, :units
+  def initialize(name, units)
+    @name = name
+    @units = units
+  end
   def calculate
-    # puts "Enter the number of user you want check.."
-    # n = gets.chomp
-    # for i in 1..n
-    puts "Enter the User Name..?"
-    @name = gets.chomp
-    puts "Enter the Units Consumed..?"
-    a =  gets.chomp.to_i
-    if (a <= 100)
-      @total = (a * 6) + 50
+    if (units <= 100)
+      @total = (units * 6) + 50
       puts "The total bill is :#{@total}"
-    elsif ( a <= 300)
-      @total = (100 * 6) + ((a - 100) * 11) +50
+    elsif ( units <= 300)
+      @total = (100 * 6) + ((units - 100) * 11) +50
       puts "The total bill is :#{@total}"
-    elsif (a >= 300)
-      @total = (100 * 6) + (100* 11) + ((a - 200) * 15)
+    elsif (units >= 300)
+      @total = (100 * 6) + (100* 11) + ((units - 200) * 15)
       puts "The total bill is :#{@total}"
     else
       puts "Please enter correct units"
@@ -31,7 +29,10 @@ end
     end
   end
 end
-# end
-s = Electricity.new
+puts "Enter the person name..?"
+name = gets.chomp
+puts "Enter the units consumed..?"
+units = gets.chomp.to_i
+s = Electricity.new(name, units)
 s.calculate
 s.mode
