@@ -1,12 +1,11 @@
-require 'Date'
+require 'date'
 class DateOperation
-  def demo
-    puts "Enter a valid date format"
-    @date_value = gets.chomp
-    puts "Enter a valid date type"
-    @type_value = gets.chomp
-    @format = Date.parse(@date_value)
+  attr_accessor :date_value, :type_value
 
+  def demo(date_value, type_value, format)
+    @date_value = date_value
+    @type_value = type_value
+    @format = format
       if @type_value == 'IST'
         puts @format.strftime('%d/%m/%Y')
         puts @format.strftime("%A %d %B %Y")
@@ -14,12 +13,20 @@ class DateOperation
         puts @format.strftime("%m/%d/%Y")
       elsif @type_value == 'ORT'
         puts @format.strftime("%Y/%m/%d %I:%M:%S %p")
-        puts Date.parse(@date).strftime("%Y-%m-%d %H:%M:%S %z")
+        puts @format.strftime("%Y-%m-%d %H:%M:%S %z")
       else
-        puts Date.parse(@date).strftime('%d/%m/%Y')
+        puts @format.strftime('%d/%m/%Y')
       end
    end
 end
 
+puts "Enter a valid date format"
+@date_value = gets.chomp
+puts "Enter a valid date type"
+@type_value = gets.chomp
+@format = Date.parse(@date_value)
+
 date = DateOperation.new
-date.demo
+date.demo(@date_value, @type_value, @format)
+
+
