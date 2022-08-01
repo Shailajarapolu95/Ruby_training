@@ -8,7 +8,7 @@ RSpec.describe Student do
 end
 
 describe Student do
-  it "Student class should have below attributes" do
+  it "should test to have deatils of student" do
     student = Student.new("shailaja", 8, 50, 50, 50)
     expect(student).to have_attributes(stud_name: "shailaja", roll_num: 8, mark1: 50, mark2: 50, mark3: 50)  
   end
