@@ -29,12 +29,13 @@ class Cricket
         end
         if (@balls == total_balls) || @current_player.nil?
           puts "Game Finished....!"
+          puts "Total score  is: #{@players_score}"
           break
         end
       end
       @players_score
    end
-   
+
 end
 k = Cricket.new
 team_1, team_2,batting_team_name, fielding_team_name = Team.new.teams_to_play
