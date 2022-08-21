@@ -1,6 +1,5 @@
 require_relative "team.rb"
 require_relative "over.rb"
-require_relative "game_type.rb"
 class Cricket
   puts "Press Enter to start the game.."
   start = gets
@@ -8,8 +7,6 @@ class Cricket
   def game(team, total_balls, name)
     @balls = 0
     @players_score = 0
-    total_balls = Over.new.total_balls
-    puts "Total balls is : #{total_balls}"
     puts "Press Enter to open the book.."
     book = gets
     @current_player = team.shift
